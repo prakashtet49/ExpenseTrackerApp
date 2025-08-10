@@ -382,7 +382,7 @@ data class CategoryTotal(
 ./gradlew assembleRelease
 
 # Clean build
-./gradlew clean assembleDebug
+./gradlew clean 
 ```
 
 ## 🔍 Key Features Explained
@@ -411,31 +411,9 @@ The app implements a priority-based alert system that shows only the top 2 most 
 - **Export Options**: Multiple formats for different use cases
 - **Date Range Handling**: Inclusive date ranges with proper SQL queries
 
-## 🐛 Troubleshooting
 
-### Common Issues
 
-#### Build Errors
-- **Kotlin Version**: Ensure Kotlin 1.9+ compatibility
-- **Dependencies**: Sync Gradle files after dependency changes
-- **Clean Build**: Use `./gradlew clean` for dependency conflicts
 
-#### Runtime Issues
-- **Permissions**: Grant camera and storage permissions
-- **File Provider**: Ensure proper file provider configuration
-- **Database**: Check Room database version and migrations
-
-#### UI Issues
-- **Material Icons**: Extended icons library for additional icon support
-- **Compose Version**: Ensure Compose version compatibility
-- **Theme Issues**: Check Material 3 theme configuration
-
-### Debug Information
-The app includes comprehensive logging for debugging:
-- Date range queries and results
-- Database operation results
-- Error handling and user feedback
-- Performance metrics and data counts
 
 ## 🔮 Future Enhancements
 
@@ -453,24 +431,8 @@ The app includes comprehensive logging for debugging:
 - **Testing**: Unit and UI tests
 - **Accessibility**: Enhanced accessibility features
 
-## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📞 Support
-
-For support and questions:
-- Create an issue in the repository
-- Check the troubleshooting section
-- Review the implementation details above
 
 ---
 
@@ -483,8 +445,8 @@ The Expense Tracker App is a comprehensive personal finance management tool desi
 This project was developed with significant assistance from AI tools to accelerate development and ensure best practices:
 
 - **ChatGPT (Claude/GPT-4)**: Used extensively for architectural decisions, code structure optimization, and debugging complex issues. Helped with Room database queries, Compose UI patterns, and Material Design 3 implementation.
-- **GitHub Copilot**: Assisted with code completion, function signatures, and boilerplate code generation for Android components and Kotlin functions.
-- **AI Code Review**: Leveraged AI tools for identifying potential bugs, suggesting performance improvements, and ensuring code follows Android development best practices.
+
+
 
 ## 📝 Prompt Logs
 
@@ -557,8 +519,7 @@ This project was developed with significant assistance from AI tools to accelera
 
 **Latest Release APK:**
 - **Version**: 1.0.0
-- **Size**: ~15 MB
-- **Download Link**: [Expense Tracker App APK](https://github.com/yourusername/ExpenseTrackerApp/releases/latest)
+- **Download Link**: [Expense Tracker App APK](https://github.com/prakashtet49/ExpenseTrackerApp/apk)
 - **Minimum Android**: API 24 (Android 7.0+)
 
 **Build Instructions:**
@@ -570,34 +531,7 @@ This project was developed with significant assistance from AI tools to accelera
 ./gradlew assembleRelease
 ```
 
-## 📸 Screenshots
+## 📸 [Screenshots](https://github.com/prakashtet49/ExpenseTrackerApp/screenshots)
 
-### Main Screens
-![Main Screen](screenshots/main_screen.png)
-*Main navigation with bottom tabs for expense entry, list, and reports*
-
-![Expense Entry](screenshots/expense_entry.png)
-*Expense entry form with category selection and receipt image options*
-
-![Expense List](screenshots/expense_list.png)
-*Expense list with date filtering and view details option*
-
-![Reports](screenshots/reports.png)
-*Comprehensive reports with daily breakdown and category analysis*
-
-![Expense Details](screenshots/expense_details.png)
-*Detailed expense view with receipt image and complete information*
-
-### Features Showcase
-![Receipt Image](screenshots/receipt_image.png)
-*Receipt image capture and gallery selection interface*
-
-![Smart Alerts](screenshots/smart_alerts.png)
-*Priority-based expense alerts system*
-
-![Category Analysis](screenshots/category_analysis.png)
-*Spending breakdown by category with percentages*
-
----
 
 **Built with ❤️ using modern Android development practices**
