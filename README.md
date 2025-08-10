@@ -27,14 +27,82 @@ A modern Android expense tracking application built with Jetpack Compose, follow
 - Custom date ranges
 
 ### Expense Categories
+
+#### 🍽️ Food & Dining
 - Food & Dining
+- Groceries
+- Restaurants
+- Coffee & Tea
+- Fast Food
+- Food Delivery
+
+#### 🚗 Transportation
 - Transportation
+- Fuel & Gas
+- Public Transport
+- Taxi & Rideshare
+- Parking
+- Vehicle Maintenance
+
+#### 🛍️ Shopping & Retail
 - Shopping
+- Clothing & Apparel
+- Electronics
+- Books & Media
+- Home & Garden
+- Personal Care
+
+#### 🎮 Entertainment & Leisure
 - Entertainment
+- Movies & TV
+- Gaming
+- Sports & Fitness
+- Hobbies
+- Events & Shows
+
+#### 🏥 Health & Wellness
 - Healthcare
+- Medicine & Pharmacy
+- Doctor Visits
+- Dental Care
+- Vision Care
+- Fitness & Gym
+
+#### 🏠 Housing & Utilities
+- Housing
+- Rent
+- Mortgage
 - Utilities
+- Internet & Phone
+- Home Maintenance
+
+#### 📚 Education & Learning
 - Education
+- Tuition & Fees
+- Books & Supplies
+- Online Courses
+- Workshops & Training
+
+#### 💼 Business & Work
+- Business
+- Office Supplies
+- Software & Tools
+- Marketing & Advertising
+- Professional Services
+
+#### ✈️ Travel & Vacation
 - Travel
+- Accommodation
+- Flights
+- Car Rental
+- Travel Activities
+
+#### 👤 Personal & Miscellaneous
+- Personal
+- Gifts
+- Donations & Charity
+- Insurance
+- Subscriptions
 - Other
 
 ## 🏗️ Architecture
@@ -196,14 +264,81 @@ data class Expense(
 )
 
 enum class ExpenseCategory(val displayName: String) {
-    FOOD("Food & Dining"),
+    // Food & Dining
+    FOOD_DINING("Food & Dining"),
+    GROCERIES("Groceries"),
+    RESTAURANTS("Restaurants"),
+    COFFEE_TEA("Coffee & Tea"),
+    FAST_FOOD("Fast Food"),
+    DELIVERY("Food Delivery"),
+    
+    // Transportation
     TRANSPORTATION("Transportation"),
+    FUEL("Fuel & Gas"),
+    PUBLIC_TRANSPORT("Public Transport"),
+    TAXI_RIDESHARE("Taxi & Rideshare"),
+    PARKING("Parking"),
+    VEHICLE_MAINTENANCE("Vehicle Maintenance"),
+    
+    // Shopping & Retail
     SHOPPING("Shopping"),
+    CLOTHING("Clothing & Apparel"),
+    ELECTRONICS("Electronics"),
+    BOOKS("Books & Media"),
+    HOME_GOODS("Home & Garden"),
+    PERSONAL_CARE("Personal Care"),
+    
+    // Entertainment & Leisure
     ENTERTAINMENT("Entertainment"),
+    MOVIES_TV("Movies & TV"),
+    GAMING("Gaming"),
+    SPORTS("Sports & Fitness"),
+    HOBBIES("Hobbies"),
+    EVENTS("Events & Shows"),
+    
+    // Health & Wellness
     HEALTHCARE("Healthcare"),
+    MEDICINE("Medicine & Pharmacy"),
+    DOCTOR_VISITS("Doctor Visits"),
+    DENTAL("Dental Care"),
+    VISION("Vision Care"),
+    FITNESS("Fitness & Gym"),
+    
+    // Housing & Utilities
+    HOUSING("Housing"),
+    RENT("Rent"),
+    MORTGAGE("Mortgage"),
     UTILITIES("Utilities"),
+    INTERNET("Internet & Phone"),
+    MAINTENANCE("Home Maintenance"),
+    
+    // Education & Learning
     EDUCATION("Education"),
+    TUITION("Tuition & Fees"),
+    BOOKS_SUPPLIES("Books & Supplies"),
+    COURSES("Online Courses"),
+    WORKSHOPS("Workshops & Training"),
+    
+    // Business & Work
+    BUSINESS("Business"),
+    OFFICE_SUPPLIES("Office Supplies"),
+    SOFTWARE("Software & Tools"),
+    MARKETING("Marketing & Advertising"),
+    PROFESSIONAL("Professional Services"),
+    
+    // Travel & Vacation
     TRAVEL("Travel"),
+    ACCOMMODATION("Accommodation"),
+    FLIGHTS("Flights"),
+    CAR_RENTAL("Car Rental"),
+    ACTIVITIES("Travel Activities"),
+    
+    // Personal & Miscellaneous
+    PERSONAL("Personal"),
+    GIFTS("Gifts"),
+    DONATIONS("Donations & Charity"),
+    INSURANCE("Insurance"),
+    SUBSCRIPTIONS("Subscriptions"),
     OTHER("Other")
 }
 ```

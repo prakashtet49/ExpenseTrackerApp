@@ -6,7 +6,7 @@ import java.time.LocalDate
 data class ExpenseEntryState(
     val title: String = "",
     val amount: String = "",
-    val category: ExpenseCategory = ExpenseCategory.FOOD,
+    val category: ExpenseCategory = ExpenseCategory.FOOD_DINING,
     val notes: String = "",
     val receiptImagePath: String? = null,
     val isLoading: Boolean = false,

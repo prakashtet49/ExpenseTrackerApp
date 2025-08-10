@@ -38,20 +38,162 @@ import java.io.FileWriter
 // Helper functions
 fun getCategoryColor(category: ExpenseCategory): Color {
     return when (category) {
-        ExpenseCategory.FOOD -> Color(0xFFE57373)      // Red
-        ExpenseCategory.TRAVEL -> Color(0xFF81C784)    // Green
-        ExpenseCategory.STAFF -> Color(0xFF64B5F6)     // Blue
-        ExpenseCategory.UTILITY -> Color(0xFFFFB74D)   // Orange
-        ExpenseCategory.OTHER -> Color(0xFF9C27B0)    // Purple
+        // Food & Dining
+        ExpenseCategory.FOOD_DINING -> Color(0xFFE57373)      // Red
+        ExpenseCategory.GROCERIES -> Color(0xFFEF5350)        // Dark Red
+        ExpenseCategory.RESTAURANTS -> Color(0xFFE57373)      // Red
+        ExpenseCategory.COFFEE_TEA -> Color(0xFFD32F2F)       // Darker Red
+        ExpenseCategory.FAST_FOOD -> Color(0xFFE57373)        // Red
+        ExpenseCategory.DELIVERY -> Color(0xFFEF5350)         // Dark Red
+        
+        // Transportation
+        ExpenseCategory.TRANSPORTATION -> Color(0xFF81C784)   // Green
+        ExpenseCategory.FUEL -> Color(0xFF66BB6A)             // Dark Green
+        ExpenseCategory.PUBLIC_TRANSPORT -> Color(0xFF81C784) // Green
+        ExpenseCategory.TAXI_RIDESHARE -> Color(0xFF66BB6A)  // Dark Green
+        ExpenseCategory.PARKING -> Color(0xFF4CAF50)          // Darker Green
+        ExpenseCategory.VEHICLE_MAINTENANCE -> Color(0xFF66BB6A) // Dark Green
+        
+        // Shopping & Retail
+        ExpenseCategory.SHOPPING -> Color(0xFF64B5F6)         // Blue
+        ExpenseCategory.CLOTHING -> Color(0xFF42A5F5)         // Dark Blue
+        ExpenseCategory.ELECTRONICS -> Color(0xFF64B5F6)      // Blue
+        ExpenseCategory.BOOKS -> Color(0xFF42A5F5)            // Dark Blue
+        ExpenseCategory.HOME_GOODS -> Color(0xFF2196F3)       // Darker Blue
+        ExpenseCategory.PERSONAL_CARE -> Color(0xFF64B5F6)    // Blue
+        
+        // Entertainment & Leisure
+        ExpenseCategory.ENTERTAINMENT -> Color(0xFFFFB74D)    // Orange
+        ExpenseCategory.MOVIES_TV -> Color(0xFFFF9800)        // Dark Orange
+        ExpenseCategory.GAMING -> Color(0xFFFFB74D)            // Orange
+        ExpenseCategory.SPORTS -> Color(0xFFFF9800)            // Dark Orange
+        ExpenseCategory.HOBBIES -> Color(0xFFFF8F00)          // Darker Orange
+        ExpenseCategory.EVENTS -> Color(0xFFFFB74D)            // Orange
+        
+        // Health & Wellness
+        ExpenseCategory.HEALTHCARE -> Color(0xFFF06292)       // Pink
+        ExpenseCategory.MEDICINE -> Color(0xFFE91E63)          // Dark Pink
+        ExpenseCategory.DOCTOR_VISITS -> Color(0xFFF06292)    // Pink
+        ExpenseCategory.DENTAL -> Color(0xFFE91E63)            // Dark Pink
+        ExpenseCategory.VISION -> Color(0xFFC2185B)            // Darker Pink
+        ExpenseCategory.FITNESS -> Color(0xFFF06292)           // Pink
+        
+        // Housing & Utilities
+        ExpenseCategory.HOUSING -> Color(0xFF9C27B0)           // Purple
+        ExpenseCategory.RENT -> Color(0xFF7B1FA2)              // Dark Purple
+        ExpenseCategory.MORTGAGE -> Color(0xFF9C27B0)          // Purple
+        ExpenseCategory.UTILITIES -> Color(0xFF7B1FA2)         // Dark Purple
+        ExpenseCategory.INTERNET -> Color(0xFF6A1B9A)          // Darker Purple
+        ExpenseCategory.MAINTENANCE -> Color(0xFF9C27B0)       // Purple
+        
+        // Education & Learning
+        ExpenseCategory.EDUCATION -> Color(0xFF26A69A)         // Teal
+        ExpenseCategory.TUITION -> Color(0xFF00897B)            // Dark Teal
+        ExpenseCategory.BOOKS_SUPPLIES -> Color(0xFF26A69A)    // Teal
+        ExpenseCategory.COURSES -> Color(0xFF00897B)            // Dark Teal
+        ExpenseCategory.WORKSHOPS -> Color(0xFF00695C)          // Darker Teal
+        
+        // Business & Work
+        ExpenseCategory.BUSINESS -> Color(0xFF795548)           // Brown
+        ExpenseCategory.OFFICE_SUPPLIES -> Color(0xFF5D4037)    // Dark Brown
+        ExpenseCategory.SOFTWARE -> Color(0xFF795548)            // Brown
+        ExpenseCategory.MARKETING -> Color(0xFF5D4037)           // Dark Brown
+        ExpenseCategory.PROFESSIONAL -> Color(0xFF3E2723)        // Darker Brown
+        
+        // Travel & Vacation
+        ExpenseCategory.TRAVEL -> Color(0xFF4DB6AC)             // Light Teal
+        ExpenseCategory.ACCOMMODATION -> Color(0xFF26A69A)      // Teal
+        ExpenseCategory.FLIGHTS -> Color(0xFF4DB6AC)            // Light Teal
+        ExpenseCategory.CAR_RENTAL -> Color(0xFF26A69A)         // Teal
+        ExpenseCategory.ACTIVITIES -> Color(0xFF00897B)         // Dark Teal
+        
+        // Personal & Miscellaneous
+        ExpenseCategory.PERSONAL -> Color(0xFF9E9E9E)           // Grey
+        ExpenseCategory.GIFTS -> Color(0xFF757575)              // Dark Grey
+        ExpenseCategory.DONATIONS -> Color(0xFF9E9E9E)          // Grey
+        ExpenseCategory.INSURANCE -> Color(0xFF757575)           // Dark Grey
+        ExpenseCategory.SUBSCRIPTIONS -> Color(0xFF616161)       // Darker Grey
+        ExpenseCategory.OTHER -> Color(0xFF424242)              // Darkest Grey
     }
 }
 
 fun getCategoryIcon(category: ExpenseCategory): String {
     return when (category) {
-        ExpenseCategory.FOOD -> "🍕"
-        ExpenseCategory.TRAVEL -> "🚗"
-        ExpenseCategory.STAFF -> "👥"
-        ExpenseCategory.UTILITY -> "⚡"
+        // Food & Dining
+        ExpenseCategory.FOOD_DINING -> "🍕"
+        ExpenseCategory.GROCERIES -> "🛒"
+        ExpenseCategory.RESTAURANTS -> "🍽️"
+        ExpenseCategory.COFFEE_TEA -> "☕"
+        ExpenseCategory.FAST_FOOD -> "🍔"
+        ExpenseCategory.DELIVERY -> "🚚"
+        
+        // Transportation
+        ExpenseCategory.TRANSPORTATION -> "🚗"
+        ExpenseCategory.FUEL -> "⛽"
+        ExpenseCategory.PUBLIC_TRANSPORT -> "🚌"
+        ExpenseCategory.TAXI_RIDESHARE -> "🚕"
+        ExpenseCategory.PARKING -> "🅿️"
+        ExpenseCategory.VEHICLE_MAINTENANCE -> "🔧"
+        
+        // Shopping & Retail
+        ExpenseCategory.SHOPPING -> "🛍️"
+        ExpenseCategory.CLOTHING -> "👕"
+        ExpenseCategory.ELECTRONICS -> "📱"
+        ExpenseCategory.BOOKS -> "📚"
+        ExpenseCategory.HOME_GOODS -> "🏠"
+        ExpenseCategory.PERSONAL_CARE -> "💄"
+        
+        // Entertainment & Leisure
+        ExpenseCategory.ENTERTAINMENT -> "🎭"
+        ExpenseCategory.MOVIES_TV -> "🎬"
+        ExpenseCategory.GAMING -> "🎮"
+        ExpenseCategory.SPORTS -> "⚽"
+        ExpenseCategory.HOBBIES -> "🎨"
+        ExpenseCategory.EVENTS -> "🎪"
+        
+        // Health & Wellness
+        ExpenseCategory.HEALTHCARE -> "🏥"
+        ExpenseCategory.MEDICINE -> "💊"
+        ExpenseCategory.DOCTOR_VISITS -> "👨‍⚕️"
+        ExpenseCategory.DENTAL -> "🦷"
+        ExpenseCategory.VISION -> "👓"
+        ExpenseCategory.FITNESS -> "💪"
+        
+        // Housing & Utilities
+        ExpenseCategory.HOUSING -> "🏠"
+        ExpenseCategory.RENT -> "🔑"
+        ExpenseCategory.MORTGAGE -> "🏦"
+        ExpenseCategory.UTILITIES -> "⚡"
+        ExpenseCategory.INTERNET -> "🌐"
+        ExpenseCategory.MAINTENANCE -> "🔨"
+        
+        // Education & Learning
+        ExpenseCategory.EDUCATION -> "🎓"
+        ExpenseCategory.TUITION -> "📖"
+        ExpenseCategory.BOOKS_SUPPLIES -> "📚"
+        ExpenseCategory.COURSES -> "💻"
+        ExpenseCategory.WORKSHOPS -> "🔧"
+        
+        // Business & Work
+        ExpenseCategory.BUSINESS -> "💼"
+        ExpenseCategory.OFFICE_SUPPLIES -> "📎"
+        ExpenseCategory.SOFTWARE -> "💻"
+        ExpenseCategory.MARKETING -> "📢"
+        ExpenseCategory.PROFESSIONAL -> "👔"
+        
+        // Travel & Vacation
+        ExpenseCategory.TRAVEL -> "✈️"
+        ExpenseCategory.ACCOMMODATION -> "🏨"
+        ExpenseCategory.FLIGHTS -> "🛩️"
+        ExpenseCategory.CAR_RENTAL -> "🚗"
+        ExpenseCategory.ACTIVITIES -> "🎯"
+        
+        // Personal & Miscellaneous
+        ExpenseCategory.PERSONAL -> "👤"
+        ExpenseCategory.GIFTS -> "🎁"
+        ExpenseCategory.DONATIONS -> "❤️"
+        ExpenseCategory.INSURANCE -> "🛡️"
+        ExpenseCategory.SUBSCRIPTIONS -> "📱"
         ExpenseCategory.OTHER -> "📦"
     }
 }
